@@ -52,4 +52,10 @@ def update_board(board, player, row, col):
     if check_full(board):
         font = pygame.font.Font(None, 36)
         text = font.render('Draw!', True, (0, 0, 0))
-        screen.blit(text, (
+        screen.blit(text, (10, 10))
+        pygame.display.flip()
+        pygame.time.delay(3000)  # Display message for 3 seconds
+        return True
+    # Game continues
+    return False
+
